@@ -5,7 +5,7 @@ import { fx } from "../fx";
 import * as sound from "../audio";
 
 const WISHES = [
-  { icon: "🌿", title: "Health", text: "May you stay strong, fit and full of energy — enough to dance at every wedding this season!" },
+  { icon: "🌿", title: "Health", text: "May you stay strong, fit and full of energy — No more sickness okay paglu!" },
   { icon: "🪙", title: "Prosperity", text: "May Maa Lakshmi shower your home with wealth, abundance and endless good fortune." },
   { icon: "😄", title: "Happiness", text: "May your days be packed with laughter, silly jokes and the kind of joy that has no reason." },
   { icon: "💖", title: "Love", text: "May you always be surrounded by people who adore you — starting with me, obviously." },
@@ -59,7 +59,7 @@ export function Wishes() {
 
   return (
     <section id="wishes" className="relative overflow-hidden pb-40 pt-24">
-      <SectionTitle kicker="शुभकामनाएँ" title="Wishes For You" sub="Six little gifts wrapped in light. Tap each card to open it." />
+      <SectionTitle kicker="शुभकामनाएँ" title="Wishes For You" sub="Six little gifts wrapped in light. Paglu tap each card to open it." />
 
       <div className="mx-auto grid max-w-5xl gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
         {WISHES.map((w, i) => (
@@ -87,8 +87,8 @@ export function Wishes() {
             <p>
               Thank you for being the best part of so many of my memories. Eat too much mithai, burst only the <i>good</i> crackers, and don't forget to share the last kaju katli with me! 😄
             </p>
-            <p className="pt-2 font-display text-2xl text-[#b3124f] sm:text-3xl">Happy Diwali, my dear friend! 🪔</p>
-            <p className="text-lg opacity-80">— Your friend, with lots of love 💛</p>
+            <p className="pt-2 font-display text-2xl text-[#b3124f] sm:text-3xl">Happy Diwali, Shaitaan Paglu! 🪔</p>
+            <p className="text-lg opacity-80">— Your Suorr, with lots of love 💛</p>
           </div>
         </div>
       </Reveal>
