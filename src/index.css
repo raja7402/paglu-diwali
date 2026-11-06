@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Yatra One", "Noto Sans Devanagari", serif;
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-hand: "Kalam", "Segoe Script", cursive;
+  --color-night: #0a0116;
+  --color-gold: #ffc53d;
+  --color-saffron: #ff7a00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0a0116;
+  color: #fff5dc;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #ff7a00;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ---------- gold text ---------- */
+.gold-text {
+  background: linear-gradient(100deg, #ffe9a8 0%, #ffc53d 25%, #ff8a00 50%, #ffd36b 75%, #fff2c2 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 5s linear infinite;
+  filter: drop-shadow(0 0 18px rgba(255, 150, 0, 0.45));
+}
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 250% 50%; }
+}
+
+/* ---------- flame ---------- */
+.flame-on { transform: scale(1); opacity: 1; transition: transform 0.5s cubic-bezier(.2,1.6,.4,1), opacity 0.3s; }
+.flame-off { transform: scale(0); opacity: 0; transition: transform 0.25s, opacity 0.2s; }
+.flame-flicker { animation: flicker 0.18s ease-in-out infinite alternate; }
+@keyframes flicker {
+  0% { transform: scale(1, 1) skewX(0deg); }
+  25% { transform: scale(0.94, 1.06) skewX(3deg); }
+  50% { transform: scale(1.04, 0.95) skewX(-2deg); }
+  100% { transform: scale(0.97, 1.04) skewX(2deg); }
+}
+.glow-pulse { animation: glowPulse 1.6s ease-in-out infinite alternate; }
+@keyframes glowPulse {
+  from { opacity: 0.75; transform: translate(-50%, -50%) scale(0.95); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+/* ---------- swing / float / twinkle ---------- */
+.swing { animation: swing 4s ease-in-out infinite; transform-origin: top center; }
+@keyframes swing {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+.swing-sm { animation: swingSm 3s ease-in-out infinite; transform-origin: top center; }
+@keyframes swingSm {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.float { animation: floaty 5s ease-in-out infinite; }
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.twinkle { animation: twinkle 2.4s ease-in-out infinite; }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.bulb { animation: bulb 1.8s ease-in-out infinite; }
+@keyframes bulb {
+  0%, 100% { opacity: 0.45; filter: brightness(0.8); }
+  50% { opacity: 1; filter: brightness(1.4); }
+}
+.spin-slow { animation: spin 90s linear infinite; }
+.spin-slow-rev { animation: spin 120s linear infinite reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin-fast { animation: spin 0.35s linear infinite; }
+
+/* ---------- reveal ---------- */
+.reveal { opacity: 0; transform: translateY(36px) scale(0.98); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(.2,.8,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- crackers ---------- */
+.fuse-spark { animation: fuseSpark 0.12s linear infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes fuseSpark {
+  from { transform: scale(0.7) rotate(0deg); opacity: 0.8; }
+  to { transform: scale(1.5) rotate(45deg); opacity: 1; }
+}
+.shake { animation: shake 0.09s linear infinite; }
+@keyframes shake {
+  0% { transform: translate(-2px, 1px) rotate(-2deg); }
+  50% { transform: translate(2px, -1px) rotate(2deg); }
+  100% { transform: translate(-1px, -2px) rotate(-1deg); }
+}
+.launch { animation: launch 0.9s cubic-bezier(.5,0,1,.6) forwards; }
+@keyframes launch {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-420px) scale(0.6); opacity: 0; }
+}
+.pop-in { animation: popIn 0.6s cubic-bezier(.2,1.6,.4,1); }
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- flip cards ---------- */
+.flip-scene { perspective: 1000px; }
+.flip-card { transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(.3,1.3,.5,1); }
+.flip-card.flipped { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+
+/* ---------- misc ---------- */
+.wobble { animation: wobble 0.5s ease; }
+@keyframes wobble {
+  0%, 100% { transform: rotate(0) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  60% { transform: rotate(8deg) scale(0.92); }
+}
+.rise { animation: rise 1.4s ease-out forwards; }
+@keyframes rise {
+  0% { transform: translate(-50%, 0) scale(0.6); opacity: 0; }
+  20% { opacity: 1; transform: translate(-50%, -20px) scale(1.1); }
+  100% { transform: translate(-50%, -90px) scale(1); opacity: 0; }
+}
+.letter-in { animation: letterIn 0.9s cubic-bezier(.2,1.4,.4,1) both; }
+@keyframes letterIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.5) rotate(-8deg); }
+  to { opacity: 1; transform: none; }
+}
+.finale-text { animation: finaleText 6s ease both; }
+@keyframes finaleText {
+  0% { opacity: 0; transform: scale(0.4); letter-spacing: 0.4em; }
+  12% { opacity: 1; transform: scale(1); letter-spacing: 0.02em; }
+  85% { opacity: 1; transform: scale(1.06); }
+  100% { opacity: 0; transform: scale(1.3); }
+}
+.btn-gold {
+  background: linear-gradient(135deg, #ffd36b, #ff9a00 55%, #ff6a00);
+  color: #3a1200;
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(255, 220, 140, 0.6) inset, 0 8px 30px rgba(255, 130, 0, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-gold:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 0 0 1px rgba(255, 220, 140, 0.8) inset, 0 12px 40px rgba(255, 130, 0, 0.7); }
+.btn-gold:active { transform: scale(0.97); }
+.btn-ghost {
+  border: 1px solid rgba(255, 200, 100, 0.5);
+  background: rgba(255, 180, 60, 0.08);
+  color: #ffe2a3;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-ghost:hover { background: rgba(255, 180, 60, 0.2); transform: translateY(-2px); }
+
+.petal-shape { transition: fill 0.25s, transform 0.25s; cursor: pointer; transform-box: fill-box; transform-origin: center; }
+.petal-shape:hover { transform: scale(1.08); filter: brightness(1.25); }
+
+@media (prefers-reduced-motion: reduce) {
+  .swing, .swing-sm, .float, .spin-slow, .spin-slow-rev { animation: none; }
+}
