@@ -76,7 +76,7 @@ export function Wishes() {
           <div className="absolute -bottom-8 left-1/2 w-20 -translate-x-1/2 sm:w-24">
             <Diya lit className="w-full drop-shadow-[0_0_20px_rgba(255,160,0,.9)]" />
           </div>
-          <div className="relative text-center font-display text-3xl text-[#b3124f] sm:text-4xl">Dear Paglu,</div>
+          <div className="relative text-center font-display text-3xl text-[#b3124f] sm:text-4xl">Shaitaan Paglu,</div>
           <div className="relative mt-5 space-y-4 text-center font-hand text-xl leading-relaxed sm:text-2xl">
             <p>
               May this Diwali light up every corner of your life — with laughter, good health, endless sweets and happiness that doesn't need a reason.
