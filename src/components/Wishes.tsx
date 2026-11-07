@@ -5,12 +5,12 @@ import { fx } from "../fx";
 import * as sound from "../audio";
 
 const WISHES = [
-  { icon: "🌿", title: "Health", text: "May u stay strong, fit and full of energy — No more sickness okay paglu!" },
+  { icon: "🌿", title: "Health", text: "May u stay strong, fit and full of energy — No more sickness okay paglu! Eat less Murukku(palm oil 😂)!! " },
   { icon: "🪙", title: "Prosperity", text: "May Maa Lakshmi shower ur home with wealth, abundance and endless good fortune." },
-  { icon: "😄", title: "Happiness", text: "May your days be packed with laughter, silly jokes and the kind of joy that has no reason.Colgate teeth please 😁" },
+  { icon: "😄", title: "Happiness", text: "May your days be packed with laughter, silly jokes and the kind of joy that has no reason.Laugh unnecessarily as u do in class.Colgate teeth please 😁" },
   { icon: "💖", title: "Love", text: "May u always be surrounded by people who adore you — starting with me, obviously." },
-  { icon: "🚀", title: "Success", text: "May Ganesh ji clear every obstacle and every dream of urs come true this year." },
-  { icon: "🕊️", title: "Peace", text: "No unnecessary stress, no sleepless nights, no unwanted worries.Give retirement to ur Overthinking okay paglu" },
+  { icon: "🚀", title: "Success", text: "May Ganesh ji clear every obstacle n every dream of urs come true this year.Don't forget me after becoming millionaire (anyway having ur email)." },
+  { icon: "🕊️", title: "Peace", text: "No unnecessary stress(who cares about pbg,agm,sac) ,no unwanted worries.Give retirement to ur overthinking okay paglu" },
 ];
 
 function WishCard({ w, i }: { w: (typeof WISHES)[number]; i: number }) {
@@ -98,7 +98,7 @@ export function Wishes() {
         <button onClick={grand} className="btn-gold mt-4 rounded-full px-10 py-5 text-xl sm:text-2xl">
           🎆 Grand Finale 🎆
         </button>
-        <p className="mt-10 font-display text-xl text-amber-300/90">Shubh Deepavali, Paglu ✨</p>
+        <p className="mt-10 font-display text-xl text-amber-300/90">Shubh Deepavali, Pagluuuuuuuu ✨</p>
         <p className="mt-1 text-sm text-amber-100/50">Made with 🪔 and a whole lot of love. Please celebrate responsibly.</p>
       </Reveal>
 
