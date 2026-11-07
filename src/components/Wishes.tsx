@@ -5,12 +5,12 @@ import { fx } from "../fx";
 import * as sound from "../audio";
 
 const WISHES = [
-  { icon: "🌿", title: "Health", text: "May you stay strong, fit and full of energy — No more sickness okay paglu!" },
-  { icon: "🪙", title: "Prosperity", text: "May Maa Lakshmi shower your home with wealth, abundance and endless good fortune." },
-  { icon: "😄", title: "Happiness", text: "May your days be packed with laughter, silly jokes and the kind of joy that has no reason." },
-  { icon: "💖", title: "Love", text: "May you always be surrounded by people who adore you — starting with me, obviously." },
-  { icon: "🚀", title: "Success", text: "May Ganesh ji clear every obstacle and every dream of yours come true this year." },
-  { icon: "🕊️", title: "Peace", text: "May your heart stay calm, your mind stay clear and your soul stay as bright as a diya." },
+  { icon: "🌿", title: "Health", text: "May u stay strong, fit and full of energy — No more sickness okay paglu!" },
+  { icon: "🪙", title: "Prosperity", text: "May Maa Lakshmi shower ur home with wealth, abundance and endless good fortune." },
+  { icon: "😄", title: "Happiness", text: "May your days be packed with laughter, silly jokes and the kind of joy that has no reason.Colgate teeth please 😁" },
+  { icon: "💖", title: "Love", text: "May u always be surrounded by people who adore you — starting with me, obviously." },
+  { icon: "🚀", title: "Success", text: "May Ganesh ji clear every obstacle and every dream of urs come true this year." },
+  { icon: "🕊️", title: "Peace", text: "No unnecessary stress, no sleepless nights, no unwanted worries.Give retirement to ur Overthinking okay paglu" },
 ];
 
 function WishCard({ w, i }: { w: (typeof WISHES)[number]; i: number }) {
@@ -82,7 +82,7 @@ export function Wishes() {
               May this Diwali light up every corner of your life — with laughter, good health, endless sweets and happiness that doesn't need a reason.
             </p>
             <p>
-              May Maa Lakshmi fill your home with prosperity, Ganesh ji clear every hurdle on your path, and may your year be brighter than the biggest anar you ever lit.
+              May Maa Lakshmi fill ur home with prosperity, Ganesh ji clear every hurdle on ur path, and may ur year be brighter than the biggest anar u ever lit.
             </p>
             <p>
               Thank you for being the best part of so many of my memories. Eat too much mithai, burst only the <i>good</i> crackers, and don't forget to share the last kaju katli with me! 😄
